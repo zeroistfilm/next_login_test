@@ -70,6 +70,7 @@ function Login() {
                 // get return url from query parameters or default to '/'
                 const returnUrl = router.query.returnUrl || '/';
                 router.push(returnUrl);
+
             })
             .catch(alertService.error);
     };

@@ -38,6 +38,7 @@ import {Nav} from 'components';
 import {NavLink} from '.';
 import {func} from "prop-types";
 import axios from "axios";
+import {fetchWrapper} from "../helpers";
 
 const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
@@ -109,20 +110,17 @@ export default function Dashboard() {
         setOpen(!open);
     };
     const onRefresh = () => {
-        console.log(document.cookie);
-        // const baseUrl = `${process.env.NEXT_PUBLIC_API_URL}`;
-        // axios.get(`${baseUrl}/auth/refresh`, {withCredentials: true})
-        //     .then(response => {
-        //         console.log(response.data);
-        //         // login successful if there's a user in the response
-        //         if (response.data) {
-        //             // store user details and jwt token in local storage to keep user logged in between page refreshes
-        //             localStorage.setItem('user', JSON.stringify(response.data));
-        //             userSubject.next(response.data);
-        //         }
-        //         console.log(response.cookie);
-        //         return response.data;
-        //     });
+        const baseUrl = `${process.env.NEXT_PUBLIC_API_URL}`;
+        const url = `${baseUrl}/auth/refresh`;
+
+        fetchWrapper.get(url)
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+            });
+
 
     }
     return (
