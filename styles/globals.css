@@ -24,3 +24,7 @@ a {
     background: black;
   }
 }
+
+.app-container {
+  min-height: 350px;
+}

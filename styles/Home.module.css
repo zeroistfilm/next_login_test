@@ -1,5 +1,5 @@
 .container {
-  padding: 0 2rem;
+  background-color: #eaeaea;
 }
 
 .main {
@@ -9,7 +9,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
+  background-color: #eaeaea;
 }
 
 .footer {
@@ -19,6 +20,7 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  background-color: #2E3B55;
 }
 
 .footer a {
@@ -126,4 +128,84 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+.navigation{
+  width: 100%;
+  height: 50px;
+}
+
+.navigation ul{
+  display:flex;
+  flex-wrap: wrap;
+  float: right;
+  margin: 0px;
+  padding-Top: 20px 
+}
+
+.navigation ul li{
+  list-style-type: none;
+  padding-right: 10px;  
+  margin-top: 50px; 
+  margin-right: 10px;
+  align-items: center; 
+} 
+
+.bm-burger-button { 
+  width: 36px;
+  height: 30px;
+  left: 36px; 
+  top: 36px;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}  
+
+.bm-burger-bars-hover {
+  background: #a90000;
+
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+.bm-menu {
+  background: #373a47;
+  padding: 0.3rem 0.3rem 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item-list {
+
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+.bm-item {
+  display: inline-block;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* styling next link component so that will be a column list of links*/
+.bm-item-list a {
+  display: flex;
+  flex-direction: column;
 }
